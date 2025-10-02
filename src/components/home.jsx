@@ -300,11 +300,6 @@ function Footer() {
       <Grid container spacing={4} justifyContent="center" alignItems="center">
         <Grid item xs={12} sm={6} md={3}>
           <Box sx={{ textAlign: "center", mb: 3 }}>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Aakash_Institute_Logo.svg/512px-Aakash_Institute_Logo.svg.png"
-              alt="Aakash Logo"
-              style={{ width: 120 }}
-            />
             <Typography variant="body2" sx={{ color: "#fff", mt: 1 }}>
               Medical | JEE | Foundations
             </Typography>
@@ -323,22 +318,11 @@ function Footer() {
 
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="body2" sx={{ color: "#fff", fontWeight: "bold", mb: 1 }}>
-            Aakash Educational Services Limited
+            RankX JEE
+            "Rank Higher. Dream Bigger."
           </Typography>
           <Typography variant="body2" sx={{ color: "#fff" }}>
-            <strong>Registered Office Address:</strong><br />
-            No. 52, 2nd Floor, Kundanhalli Gate, Varthur Road,<br />
-            Opposite SSK Kalyan Mandap, Whitefield, Bengaluru 560037<br />
-            CIN: U80302KA2007PLC150057
-          </Typography>
-          <Typography variant="body2" sx={{ color: "#fff", mt: 1 }}>
-            Telephone: 011-47623300
-          </Typography>
-          <Typography variant="body2" sx={{ color: "#fff" }}>
-            Fax: +91-11-47623472
-          </Typography>
-          <Typography variant="body2" sx={{ color: "#fff" }}>
-            Email: <Link href="mailto:corporate@aesl.in" color="inherit">corporate@aesl.in</Link>
+            Email: <Link href="#" color="inherit">b.swarag06@gmail.com</Link>
           </Typography>
         </Grid>
       </Grid>
@@ -439,3 +423,4 @@ export default function Home() {
     </Box>
   );
 }
+
