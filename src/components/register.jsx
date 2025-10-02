@@ -35,12 +35,8 @@ function Register() {
     const message = await response.data;
 
     console.log(message);
-
-    if (message.data.message === 'User Created Successfully') {
-      window.location.href = "/home";
-    }
-
-    alert('Account Already Exists')
+    
+    window.location.href = "/login";
   }
 
   return (
@@ -239,5 +235,6 @@ function Register() {
 }
 
 export default Register;
+
 
 
