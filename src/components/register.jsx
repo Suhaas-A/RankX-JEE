@@ -29,7 +29,7 @@ function Register() {
       accountType: accountType,
     };
     const response = await axios.post(
-      "http://127.0.0.1:5000/api/register",
+      "https://jee.pythonanywhere.com/api/register",
       data
     );
     const message = await response.data;
@@ -235,3 +235,4 @@ function Register() {
 }
 
 export default Register;
+
