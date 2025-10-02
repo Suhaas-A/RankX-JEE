@@ -22,7 +22,7 @@ function Login() {
       password: password,
     };
     const response = await axios.post(
-      "http://127.0.0.1:5000/api/login",
+      "https://jee.pythonanywhere.com/api/login",
       data
     );
     const message = await response.data;
@@ -193,3 +193,4 @@ function Login() {
 }
 
 export default Login;
+
