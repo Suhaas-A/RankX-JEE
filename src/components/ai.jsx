@@ -55,7 +55,7 @@ export default function AiPage({LogoComponent = null }) {
   const LogoToRender = LogoComponent || InlineLogo;
 
   async function GetResponse() {
-    let response_ = await axios.post("http://127.0.0.1:5000/api/ai-prompt", {'prompt': query});
+    let response_ = await axios.post("https://jee.pythonanywhere.com/api/ai-prompt", {'prompt': query});
     console.log(response_.data.response);
     setResponse(response_.data.response);
   }
@@ -163,3 +163,4 @@ export default function AiPage({LogoComponent = null }) {
     </Box>
   );
 }
+
