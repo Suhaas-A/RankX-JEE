@@ -36,7 +36,11 @@ function Register() {
 
     console.log(message);
 
-    window.location.href = "/home";
+    if (message.data.message === 'User Created Successfully') {
+      window.location.href = "/home";
+    }
+
+    alert('Account Already Exists')
   }
 
   return (
@@ -235,4 +239,5 @@ function Register() {
 }
 
 export default Register;
+
 
