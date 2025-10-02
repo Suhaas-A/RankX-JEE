@@ -32,7 +32,7 @@ function InlineLogo({ size = 56 }) {
         boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
       }}
     >
-      <svg width={size} height={size} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <svg width={size} height={size} viewBox="0 0 100 100" xmlns={logo.jp}>
         <rect x="0" y="0" width="100" height="100" rx="8" fill="#FFFFFF" />
         <g transform="translate(8,8)">
           <rect x="0" y="0" width="64" height="64" rx="6" fill="#A51C30" stroke="#2E2E2E" strokeWidth="2" />
@@ -163,4 +163,5 @@ export default function AiPage({LogoComponent = null }) {
     </Box>
   );
 }
+
 
