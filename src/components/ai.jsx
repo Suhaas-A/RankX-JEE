@@ -49,16 +49,22 @@ function InlineLogo({ size = 56 }) {
 }
 
 export default function AiPage({LogoComponent = null }) {
-  const [query, setQuery] = useState("");
-  const [response, setResponse] = useState(null);
+  const [loading, setLoading] = useState(false);
+const [error, setError] = useState("");
 
-  const LogoToRender = LogoComponent || InlineLogo;
-
-  async function GetResponse() {
-    let response_ = await axios.post("https://jee.pythonanywhere.com/api/ai-prompt", {'prompt': query});
-    console.log(response_.data.response);
-    setResponse(response_.data.response);
+async function GetResponse() {
+  if (!query.trim()) return;
+  setLoading(true);
+  setError("");
+  try {
+    const res = await axios.post("https://jee.pythonanywhere.com/api/ai-prompt", { prompt: query });
+    setResponse(res.data.response);
+  } catch (err) {
+    setError(err.response?.data?.error || "Something went wrong. Please try again.");
+  } finally {
+    setLoading(false);
   }
+}
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh", bgcolor: "#f9f9f9" }}>
